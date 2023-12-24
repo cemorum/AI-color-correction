@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="form-container">
+        <h2>AI Color Grading with Object Detection</h2>
+        <div class="upload-container">
+            <input type="file" id="fileInput" style="display: none;">
+            <div class="dropzone2 img-upload" id="dropzone">
+                <div class="dz-message">
+                    <div class="img-block">
+                        <img src="static/assets/upload2.png" class="img-upload" width=110>
+                    </div>
+                    <div class="text">
+                        <h2 id="uploadh2">
+                            Select file for color correction
+                        </h2>
+                        <div class='text_bot'>
+                            <p id="uploadp_1">Supported formats: jpeg, png, mp4</p>
+                            <p id="uploadp_2">The maximum file size is 10 Mb.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <form id="myForm">
+            <label for="check_flares">Flares/Glares:</label>
+            <input type="checkbox" id="check_flares" name="flares" value="yes" class="styled-input">
+            <p></p>
+            <label for="check_shadows">Shadows:</label>
+            <input type="checkbox" id="check_shadows" name="shadows" value="yes" class="styled-input">
+            <p></p>
+            <button type="submit" id="submitBtn" class="btn">Apply filters</button>
+        </form>
+    </div>
+    <div id="result-container" class="result-container" style="display: none;">
+        <h2>Results:</h2>
+        <div id="img-input" class="img-box"></div>
+        <div id="img-result" class="img-box"></div>
+    </div>
+{% endblock %}

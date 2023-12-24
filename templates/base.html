@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="/static/assets/favicon-16x16.png" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/static/main.js"></script>
+    <title>{% block title %}X-MAS HACK{% endblock %}</title>
+</head>
+
+<body>
+    <div id="full-image"></div>
+    <div class='logos'>
+        <nav class="container">
+            <img class="img_logo" src="static/assets/logo.jpg" width="80">
+            <a class="logo" href='.'>Special for X-MAS HACK</a>
+        </nav>
+    </div>
+    <section>
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </section>
+</body>
+</html>
